@@ -1,32 +1,32 @@
 import { Component } from '@angular/core';
 
 @Component( {
-  selector: 'app-counter',
-  template: `<p><strong>Counter:</strong> {{ counter }}</p>
+    selector: 'app-counter',
+    template: `<p><strong>Counter:</strong> {{ counter }}</p>
 
-  <button (click)="increaseBy(1)">
-    +1
-  </button>
-  <button (click)="reset()">
-    Reset
-  </button>
-  <button (click)="increaseBy(-1)">
-    -1
-  </button>
-  `
+    <button class="btn btn-secondary mx-2" (click)="increaseBy(1)">
+        +1
+    </button>
+    <button class="btn btn-secondary mx-2" (click)="reset()">
+        Reset
+    </button>
+    <button class="btn btn-secondary mx-2" (click)="increaseBy(-1)">
+        -1
+    </button>
+    `,
 } )
 
 export class CounterComponent {
-  constructor() {
-  }
+    constructor() {
+    }
 
-  public counter: number = 10;
+    public counter: number = 10;
 
-  increaseBy( value: number ): void {
-    this.counter += value;
-  }
+    increaseBy( value: number ): void {
+        this.counter += value;
+    }
 
-  reset(): void {
-    this.counter = 10;
-  }
+    reset(): void {
+        this.counter = 10;
+    }
 }
