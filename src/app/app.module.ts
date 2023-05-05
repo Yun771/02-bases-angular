@@ -1,16 +1,21 @@
-import { NgModule } from '@angular/core';
+import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { AppComponent }  from './app.component';
+import { CounterModule } from "./counter/counter.module";
+import { HeroesModule }  from "./heroes/hereos.module";
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+@NgModule( {
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        CounterModule,
+        HeroesModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+} )
+export class AppModule {
+}
